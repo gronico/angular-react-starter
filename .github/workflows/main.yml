@@ -28,7 +28,9 @@ jobs:
       - run: npm cache clean --force
       - run: npm install
       - run: npm install -g @angular/cli > /dev/null
-      - run: npm run build
+      - run: |
+          cd angular
+          npm run build
 
 
 
