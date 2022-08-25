@@ -32,4 +32,16 @@ jobs:
           ng build
 
 
+      - name: copy file via ssh key
+        uses: appleboy/scp-action@master
+        env:
+          HOST:  ${{ secrets.HOST }}
+          PORT:  ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+        with:
+          source: "./angular/dist/angular-starter"
+          target: "/var/www/html/v2/angular-starter/"
+          strip_components: 2  
+
 
