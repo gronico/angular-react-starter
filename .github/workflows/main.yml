@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: test de build npm
+name: compil branche master
 
 on:
   push:
@@ -27,14 +27,8 @@ jobs:
       - run: |
           cd angular
           npm cache clean --force
-      - run: |
-          cd angular
           npm install
-      - run: |
-          cd angular
           npm install -g @angular/cli > /dev/null
-      - run: |
-          cd angular
           ng build
 
 
