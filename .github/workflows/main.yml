@@ -15,7 +15,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v1
-      - uses: actions/setup-node@v1 #this installs node and npm for us
+      - name: setup node
+        uses: actions/setup-node@v1 #this installs node and npm for us
         with:
           node-version: "14.x"
 
